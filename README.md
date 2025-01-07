@@ -10,11 +10,12 @@ This repository demonstrates how to prevent unnecessary re-renders in React usin
 4. **User understands the need for the dependency array in the `useCallback` Hook.**
 5. **User should be able to use the dependency array with `useCallback` to prevent unnecessary re-creations of functions.**
 
-## Activities and Use Cases
 
-### Activity 1: Child Component Re-renders Due to Function Reference Change
+<!-- ## Activities and Use Cases
 
-#### File: `src/Tasks/Activity1.jsx`
+### ELO 1: Child Component Re-renders Due to Function Reference Change
+
+#### File: `src/Tasks/ELO1.jsx`
 
 ```jsx
 import React, { useState } from 'react';
@@ -190,7 +191,7 @@ const Activity5 = () => {
 };
 
 export default Activity5;
-```
+``` -->
 
 ### Note: 
-This `README.md` provides an overview of the activities and their related code snippets, explaining key React concepts related to optimization.
+This `Repository` provides an overview of the activities and their related code snippets, explaining key React concepts related to optimization.

@@ -41,34 +41,57 @@ const App = () => {
           <h5>Comparing the behavior of the functions with useCallback and without useCallback hook.</h5>
           <hr></hr>
           <ELO2 />
+          <p>
+            Try clicking the buttons or changing the input so that we can observe that only the function without useCallback hook re-renders.
+          </p>
         </>} />
         <Route path="/ELO21" element={<>
           <h3>2.User should be able to use useCallback() to avoid function reference change when a component re-renders.</h3>
           <h5>Child Component still re-renders after preventing function reference change.</h5>
           <hr></hr>
           <ELO21 />
+          <p>
+            Try changing the input field to rerender the parent component. we can observe that child component also re-renders along with parent though the function is not recreating.
+          </p>
         </>} />
         <Route path="/ELO3" element={<>
           <h2>3.User should be able ot use React.Memo() along with useCallback() to resolve the unnecessary re-render issue.</h2>
           <hr></hr>
           <ELO3 />
+          <p>
+            Here we can observe that child component is not re-rendered.
+          </p>
         </>} />
         <Route path="/ELO4" element={<>
           <h2>4.User understands the need of dependency array in useCallback Hook.</h2>
           <h5>No Dependency Array.</h5>
           <hr></hr>
           <ELO4 />
+          <p>
+            Try clicking on Increment button, you observe that the Mutiply Button(Child Component)  is re-rendering, although the child component wrapped with Memo hook and function wrapped with useCallback.
+            This is because there is no dependency array, which means useCallback will re-create the function every time the parent component re-renders.
+          </p>
         </>} />
         <Route path="/ELO41" element={<>
           <h2>4.User understands the need of dependency array in useCallback Hook.</h2>
           <h5>Empty Dependency Array.</h5>
           <hr></hr>
           <ELO41 />
+          <p>
+            Try clicking on Increment button, you observe that the Mutiply Button(Child Component) is not re-rendering.
+            This is because there is an empty dependency array, which means useCallback will not re-create the function when the parent component re-renders.
+            But multiplier will not update to mutiply with the count as the function doesn't recreate.
+          </p>
         </>} />
         <Route path="/ELO5" element={<>
           <h2>5.User should be able to use dependency array with useCallback.</h2>
           <hr></hr>
           <ELO5 />
+          <p>
+            Try changing the input field, you observe that the Mutiply Button(Child Component) is re-rendering.
+            This is because there is a dependency array, which means useCallback will re-create the function when the parent component re-renders,
+            and also when the dependency changes (i.e., input field in this case).
+          </p>
         </>} />
         <Route path="/" element={<>Navigate to the Learning Outcomes</>} />
       </Routes>
