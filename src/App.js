@@ -93,7 +93,7 @@ const App = () => {
             and also when the dependency changes (i.e., input field in this case).
           </p>
         </>} />
-        <Route path="/" element={<>Navigate to the Learning Outcomes</>} />
+        <Route path="/" element={<>Open Browser Console and Navigate to the Learning Outcomes</>} />
       </Routes>
     </div>
   </Router>
