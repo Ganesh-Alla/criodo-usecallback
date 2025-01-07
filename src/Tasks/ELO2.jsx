@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import Child from '../components/Child2';
+import Child2 from '../components/Child2';
 
 const ELO2 = () => {
     // Parent states (count and multiplier)
@@ -24,7 +24,7 @@ const ELO2 = () => {
   return (
     <>
     <h1> Count: {count} </h1>
-    <Child
+    <Child2
         withoutCallback={incrementWithoutCallback}
         withCallback={incrementWithCallback}
       />
