@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-// Child Component: Receives a function as a prop
-const Child = ({ onClick }) => {
-  console.log("Child re-rendered");  // Log when child is re-rendered
+// Child Component: Receives a IncrementCount function as a prop
+const Child = ({ handleClick }) => {
+  console.log(`Increment Component rendered`);  // Log when Child is re-rendered
   return (
     <div>
-      <button onClick={onClick}>Click me</button>
+      <button onClick={handleClick}>Increment (Child)</button>
     </div>
   );
 };

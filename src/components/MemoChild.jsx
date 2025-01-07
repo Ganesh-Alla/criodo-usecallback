@@ -1,13 +1,14 @@
-import React, { memo } from 'react';
+import React from 'react'
 
-// Wrap Child with memo to prevent unnecessary re-renders
-const MemoChild = memo(({ onClick }) => {
-    console.log("MemoChild re-rendered");
-    return (
-      <div>
-        <button onClick={onClick}>Click Me</button>
-      </div>
-    );
-  });
 
-export default MemoChild;
+// Child Component: Receives a IncrementCount function as a prop
+const Child = ({ handleClick }) => {
+  console.log(`Increment Component rendered`);  // Log when Child is re-rendered
+  return (
+    <div>
+      <button onClick={handleClick}>Increment (Child)</button>
+    </div>
+  );
+};
+
+export default React.memo(Child) // Wrapped with Memo (Memoize the component)
