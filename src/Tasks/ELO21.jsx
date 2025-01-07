@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import MemoChild from '../components/MemoChild';
+import Child from '../components/Child';
 
-const EPO3 = () => {
+const ELO21 = () => {
     // Parent states (count and multiplier)
     const [count, setCount] = useState(1);
     const [multiplier, setMultiplier] = useState(1);
@@ -21,7 +21,7 @@ const EPO3 = () => {
   return (
     <>
     <h1> Count: {count} </h1>
-    <MemoChild handleClick={IncrementCount} />
+    <Child handleClick={IncrementCount} />
       <input
         type="number"
         value={multiplier}
@@ -32,4 +32,4 @@ const EPO3 = () => {
   )
 }
 
-export default EPO3
+export default ELO21

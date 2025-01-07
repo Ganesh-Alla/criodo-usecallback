@@ -1,38 +1,27 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import Child from '../components/Child3';
+import MemoChild from '../components/MemoChild';
 
-const EPO41 = () => {
-    // Parent state (count and text)
+const ELO3 = () => {
+    // Parent states (count and multiplier)
     const [count, setCount] = useState(1);
     const [multiplier, setMultiplier] = useState(1);
 
+    //re-created on every render
     const IncrementCount = useCallback(() => {
       console.log("Increment function called");
       setCount((prevCount) => prevCount + 1);
     },[]);
     
-    const MultiplyCount = useCallback(() => {
-      console.log("Multiplier function called with " + multiplier);
-      setCount((prevCount) => prevCount * multiplier);
-    },[]);
-
   useEffect(() => {
     console.log("IncrementCount reference changed");
-  }, [IncrementCount]); // Dependency on handleClick
-
-  useEffect(() => {
-    console.log("MultiplyCount reference changed");
-  }, [MultiplyCount]); // Dependency on handleClick
+  }, [IncrementCount]); //  check reference change
 
     console.log("Parent Component rendered");  // Log when parent is rendered
 
   return (
     <>
     <h1> Count: {count} </h1>
-
-    <Child increment={IncrementCount} label="Increment" />
-    <Child increment={MultiplyCount} label="multiply" />
-
+    <MemoChild handleClick={IncrementCount} />
       <input
         type="number"
         value={multiplier}
@@ -43,4 +32,4 @@ const EPO41 = () => {
   )
 }
 
-export default EPO41
+export default ELO3

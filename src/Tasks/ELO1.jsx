@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Child from '../components/Child';
 
-const EPO1 = () => {
+const ELO1 = () => {
     // Parent states (count and multiplier)
     const [count, setCount] = useState(1);
     const [multiplier, setMultiplier] = useState(1);
@@ -32,4 +32,4 @@ const EPO1 = () => {
   )
 }
 
-export default EPO1
+export default ELO1

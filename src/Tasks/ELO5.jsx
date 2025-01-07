@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import Child from '../components/Child3';
 
-const EPO4 = () => {
+const ELO5 = () => {
     // Parent state (count and text)
     const [count, setCount] = useState(1);
     const [multiplier, setMultiplier] = useState(1);
@@ -14,15 +14,15 @@ const EPO4 = () => {
     const MultiplyCount = useCallback(() => {
       console.log("Multiplier function called with " + multiplier);
       setCount((prevCount) => prevCount * multiplier);
-    });
+    },[multiplier]);
 
   useEffect(() => {
     console.log("IncrementCount reference changed");
-  }, [IncrementCount]); // check reference change for IncrementCount
+  }, [IncrementCount]); // Dependency on handleClick
 
   useEffect(() => {
     console.log("MultiplyCount reference changed");
-  }, [MultiplyCount]); // check reference change for MultiplyCount
+  }, [MultiplyCount]); // Dependency on handleClick
 
     console.log("Parent Component rendered");  // Log when parent is rendered
 
@@ -43,4 +43,4 @@ const EPO4 = () => {
   )
 }
 
-export default EPO4
+export default ELO5

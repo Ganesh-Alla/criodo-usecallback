@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import Child from '../components/Child';
 
-const EPO2 = () => {
+const ELO2 = () => {
     // Parent states (count and multiplier)
     const [count, setCount] = useState(1);
     const [multiplier, setMultiplier] = useState(1);
@@ -38,4 +38,4 @@ const EPO2 = () => {
   )
 }
 
-export default EPO2
+export default ELO2
